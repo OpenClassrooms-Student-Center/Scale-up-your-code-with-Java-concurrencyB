@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.openclassrooms.concurrency'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task(runSimpleFlowExample, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.openclassrooms.concurrency.reactivejava.app.flow.FlowPlanetaryAveragingApp'
+    classpath = sourceSets.main.runtimeClasspath
+}
