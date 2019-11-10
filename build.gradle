@@ -19,3 +19,7 @@ task(runSimpleFlowExample, dependsOn: 'classes', type: JavaExec) {
     main = 'com.openclassrooms.concurrency.reactivejava.app.flow.FlowPlanetaryAveragingApp'
     classpath = sourceSets.main.runtimeClasspath
 }
+
+dependencies {
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.0.1'
+}
