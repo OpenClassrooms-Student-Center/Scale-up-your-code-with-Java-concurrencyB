@@ -9,8 +9,7 @@ import java.util.stream.IntStream;
 public class RxJavaPlanetaryAveragingApp {
 
     public static void main(String[] args) {
-        CountDownLatch doneLatch = new CountDownLatch(1);
-        RxJavaTemperatureSubscriber temperatureSubscriber = new RxJavaTemperatureSubscriber(doneLatch);
+        RxJavaTemperatureSubscriber temperatureSubscriber = new RxJavaTemperatureSubscriber();
 
         // from a stream
         IntStream stream = IntStream.range(0, 100);
